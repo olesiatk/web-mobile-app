@@ -10,12 +10,16 @@
   /* height: 100vh; */
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 42px 20px;
+}
+
+@media (max-width: 300px) {
+
 }
 
 .App__header {
   margin: 0;
-  padding: 60px 0 20px;
+  padding: 20px 0;
   color: #181C43;
   font-weight: 800;
   font-size: 22px;
@@ -59,11 +63,11 @@
   background-color: white;
   font-size: 12px;
   font-weight: 500px;
-  height: 440px;
-  width: 275px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
 }
+
 
 .App__label-text {
   padding: 0;
@@ -73,19 +77,146 @@
   line-height: 20px;
   font-weight: 600px;
   color: rgba(0, 0, 0, 0.8);
-  text-align: left;
+  text-align: justify;
+}
+
+.App__lable-password {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 
 .App__input {
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
+  line-height: 36px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 50px;
+  background-color: #F3F3FA;
+  outline: none;
+  width: 100%;
+
 }
 
+.App__help {
+  position: relative;
+  margin-right: 40px;
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  background-color: #E0E0E0;
+  color: white;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.App__help--active {
+  background-color: #1E1A3E;
+  cursor: pointer;
+}
+
+.App__help--active::after {
+  position: absolute;
+  bottom: 20px;
+  right: -20px;
+  padding: 8px 10px;
+  content: "Password must contain 8+ symbols, 1 special and 2 capital letters";
+  width: 184px;
+  background: #1E1A3E;
+  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #F3F3F3;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.App__help--active::before {
+  position: absolute;
+  bottom: 9px;
+  right: 0;
+  content: "";
+  border: 6px solid transparent;
+  border-top: 6px solid #1E1A3E;
+}
 
 .App__form-button {
+  margin: 15px auto 0;
   border: none;
   border-radius: 50px;
   background-color: #1E1A3E;
   line-height: 48px;
-  width: 230px;
+  width: 100%;
   color: white;
+}
+
+.Not-active {
+  opacity: 0.4;
+}
+
+.Wrong {
+  background: #FF6683;
+  opacity: 0.2; 
+}
+
+.App__text-question {
+  margin: 20px auto 0;
+  padding: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1E1A3E;
+}
+
+.App__link {
+  text-decoration: underline;
+}
+
+.App__error {
+  position: fixed;
+  margin: auto;
+  bottom: 18px;
+  left: 20px;
+  right: 20px;
+  align-items: center;
+  border: none;
+  border-radius: 50px;
+  background-color: #FF6683;
+  font-size: 14px;
+  line-height: 48px;
+  width: 100%;
+  max-width: 275px;
+  color: white;
+}
+
+@media (max-width: 300px) {
+  .App {
+    padding: 20px;
+  }
+
+
+
+  .App__label-text {
+    margin-left: 20px;
+  }
+
+  .App__label-text {
+    margin-left: 20px;
+  }
+
+  .App__help {
+    margin-right: 20px;
+  }
+
+  .App__help--active::after {
+    right: -30px;
+  }
+
+  .App__form-button {
+    width: 180px;
+  }
+
+  .App__error {
+    max-width: 230px;
+  }
 }
