@@ -242,3 +242,25 @@ body {
     max-width: 230px;
   }
 }
+
+@media (max-height: 600px) {
+  .App {
+    padding: 20px;
+  }
+
+  .App__input {
+    margin: 0 auto 18px;
+  }
+
+  .App__form-button {
+    margin: 0;
+  }
+
+  .App__text-question {
+    margin: 10px auto 0;
+  }
+
+  .App__button-link {
+    margin: 0;
+  }
+}
